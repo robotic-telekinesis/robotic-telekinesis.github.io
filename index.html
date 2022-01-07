@@ -63,15 +63,14 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Minimizing Energy Consumption Leads to the<br />Emergence of Gaits in Legged Robots</h1>
+          <h1 class="title is-1 publication-title">Robotic Telekinesis: </br>Learning a Robotic Hand Imitator by Watching Humans on Youtube </br>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://markfzp.github.io/">Zipeng Fu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="https://ashish-kmr.github.io/">‪Ashish Kumar</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a>Aravind Sivakumar</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a>‪Kenneth Shaw</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup>
-              <br /><sup>1</sup>Carnegie Mellon University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>UC Berkeley
-              <span class="brmod">CoRL 2021</span>
+              <br /><sup>1</sup>Carnegie Mellon University
+              <span class="brmod">CVPR 2022</span>
             </span>
           </div>
 
@@ -107,16 +106,19 @@
 </section>
 
 <section class="hero teaser">
-  <div class="hero-body">
     <div class="columns is-centered">
       <div class="column is-9">
-        <video autoplay muted loop playsinline height="100%" src="./resources/teaser.mp4"></video>
+        <div id="method_video" class="columns is-centered has-text-centered">
+            <div class="publication-video">
+              <iframe src="https://drive.google.com/file/d/1lnn3OSnZWyAWHM8c8dSHSdsqptw4Tlpo/preview"
+                      width="640" height="480" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
         <h2 class="subtitle has-text-centered">
-          Walking, trotting and bouncing (galloping) gaits in real world emerge from learning fully in simulation by minimizing the energy consumption <strong>without any human priors about gaits</strong>. 
+
         </h2>
       </div>
     </div>
-  </div>
 </section>
 
 
@@ -129,7 +131,7 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Legged locomotion is commonly studied and expressed as a discrete set of gait patterns, like walk, trot, gallop, which are usually treated as given and pre-programmed in legged robots for efficient locomotion at different speeds. However, fixing a set of pre-programmed gaits limits the generality of locomotion. Recent animal motor studies show that these conventional gaits are only prevalent in ideal flat terrain conditions while real-world locomotion is unstructured and more like bouts of intermittent steps. What principles could lead to both structured and unstructured patterns across mammals and how to synthesize them in robots? In this work, we take an analysis-by-synthesis approach and learn to move by minimizing mechanical energy. We demonstrate that learning to minimize energy consumption is sufficient for the emergence of natural locomotion gaits at different speeds in real quadruped robots. The emergent gaits are structured in ideal terrains and look similar to that of horses and sheep. The same approach leads to unstructured gaits in rough terrains which is consistent with the findings in animal motor control. We validate our hypothesis in both simulation and real hardware across natural terrains. 
+          We build a system that enables a human to control a robot hand and arm, simply by demonstrating motions with their own hand. The robot observes the human operator via a single RGB camera and imitates their actions \textbf{in real-time}. Human hands and robot hands differ in shape, size, and joint structure, and performing this translation from a single uncalibrated camera is a highly underconstrained problem. Moreover, the retargeted trajectories must effectively execute tasks on a physical robot, which requires them to be temporally smooth and free of self-collisions. Our key insight is that while paired human-robot correspondence data is expensive to collect, the internet contains a massive corpus of rich and diverse human hand videos. We leverage this data in order to train a system that understands human hands, and retargets a human video stream into a robot hand-arm trajectory that is smooth, swift, safe, and semantically similar to the guiding demonstration. We demonstrate that it enables previously untrained people to teleoperate a robot on various dexterous manipulation tasks. We hope this work makes robot teaching more accessible, and that in the future, our system can be used to aid robots that learn to act autonomously in the real world.
           </p>
         </div>
       </div>
@@ -140,15 +142,6 @@
   <!-- Paper video. -->
   <br/>
   <br/>
-  <div id="method_video" class="columns is-centered has-text-centered">
-    <div class="column is-two-thirds">
-      <h2 class="title is-2">Project Video</h2>
-      <div class="publication-video">
-        <iframe src="https://www.youtube.com/embed/OQN5W2IAb9k"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
   <!--/ Paper video. -->
 </section>
 
@@ -156,46 +149,67 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Gait Transition via a Velocity-Conditioned Policy</h2>
+        <h2 class="title is-2" style="text-align: center;">Tasks</h2>
+
         <tr>
           <td>
             <br>
             <div class="columns is-centered has-text-centered">
-              <video autoplay loop muted playsinline src="./resources/gait_transition.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+              <img src="./static/images/Tasks_Expert.png" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></img>
             </div>
           </td>
         </tr>
-      </div> 
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <p>
+              Robot is completing tasks with the expert operator.  These tasks from left to right, from the first row are Pickup Dice Toy, Pickup Dinosaur   Doll, Box Rotation, Scissor Pickup, Cup Stack.  On the second row, two cup stacking, pouring cubes onto plate, cup into plate, open drawer and open drawer and pickup cup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Method</h2>
+
+        <tr>
+          <td>
+            <br>
+            <div class="columns is-centered has-text-centered">
+              <img src="./resources/crop_method.png" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></img>
+            </div>
+          </td>
+        </tr>
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <p>
+              Our system consists of an xArm6 robot arm, a 16-DoF Allegro robot hand and a single RGB camera that captures a stream of images of the human operator.  The camera can be placed anywhere as long as the operator is within the camera's field of view.  Each captured image at 30hz is retargeted into a pair of robot commands (one for the Allegro hand and one for the xArm) which place the robot hand and arm in poses that match the hand-arm poses of the human operator.  This capture-retarget-command loop allows the operator to guide the robot to complete tasks while watching the robot mimic them in real-time.  The figure illustrates operators using the system to solve a pair of grasping tasks.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <br><br>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Similar Energy Consumption Trend<br \>between Our Robot and Horses</h2>
-        
-        <div class="is-vcentered interpolation-panel">
-          <div class="content has-text-centered">
-            <!-- <img style="width: 1.5%;" src="./resources/divider.png"> -->
-            <img style="border: 1px solid #bbb; border-radius: 10px; width: 36.75%;" src="./resources/horse.png">&nbsp;&nbsp;&nbsp;&nbsp;<img style="border: 1px solid #bbb; border-radius: 10px; width: 40%;" src="./resources/mpc_energy.png">
-          </div>
-          <div class="content has-text-centered">
-            <p>
-              In Biomechanics, Froude number is a metric characterizing gaits of quadrupeds and bipeds. Animals with a similar morphology but with different sizes tend to use the same gait when moving with equal Froude numbers. Our robot has similar Froude numbers as horses and sheep. The plot on the left <strong>(Hoyt et al. 1981)</strong> analyzes the energy consumption of different horse gaits across different speeds. Shown on the right, the energy consumption plot of our robot has a similar trend, which also validates certain gaits will emerge at certain speeds if we minimize the energy consumption. 
-            </p>
-          </div>
-        </div>
+        <h2 class="title is-2" style="text-align: center;">Test Time Optimization vs Learned Neural Network Retargeting
+
         <br>
-        <div class="is-vcentered interpolation-panel">
-          <div class="content has-text-centered">
-            <video autoplay loop muted playsinline src="./resources/gait_comparison.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
-          </div>
-          <div class="content has-text-centered">
-            <p>
-              Foot Contact Plots of Walking, Trotting, Bouncing (Galloping)
-            </p>
-          </div>
-        </div>
-
+            <img src="./static/images/self_collision.png" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></img>
+      </div>
+    </div>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p>
+        TODO SOMETHING BETTER HERE: We consider hand retargeting networks.  The red boxes highlight instances where the vanilla network outputs Allegro hand poses that result in self-collision.  The green boxes depict the predictions of the network trained with self-collision loss.  These robot hand poses maintain functional similarity to the human's hand pose, but avoid self-collision.
+        </p>
       </div>
     </div>
 
@@ -203,65 +217,22 @@
     <br><br>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">More Examples of Emergent Structured Gaits <br> (Walk, Trot & Bounce)</h2>
-        <tr>
-          <td>
-            <br><h3 class="title is-4">Walking Gait (0.375 m/s): </h3><br>
-              <div class="columns is-centered has-text-centered">
-                <video autoplay loop muted playsinline src="./resources/walk_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/walk_payload.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/walk_brush.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-              </div>
-          </td>
-        </tr>
+        <h2 class="title is-2" style="text-align: center;">Human Subject Study
 
-        <tr>
-          <td>
-            <br><h3 class="title is-4">Trotting Gait (0.9 m/s): </h3><br>
-              <div class="columns is-centered has-text-centered">
-                <video autoplay loop muted playsinline src="./resources/trot_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/trot_payload.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/trot_brush.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
-              </div>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <br><h3 class="title is-4">Bouncing (Galloping) Gait (1.5 m/s): </h3><br>
-              <div class="columns is-centered has-text-centered">
-                <video autoplay loop muted playsinline src="./resources/bounce_pull.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/bounce_pull_slomo.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-              </div>
-              <br />
-              <div class="columns is-centered has-text-centered">
-                <video autoplay loop muted playsinline src="./resources/bounce_slomo.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/bounce_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-              </div>
-          </td>
-        </tr>
-        
-        <!-- <tr>
-          <td>
-            <br><h3 class="title is-4">Gait Transition via a Velocity-Conditioned Policy: </h3><br>
-              <div class="columns is-centered has-text-centered">
-                <video autoplay loop muted playsinline src="./resources/gait_transition.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
-              </div>
-          </td>
-        </tr> -->
-
-        <br/>
+        <br>
+            <img src="./static/images/self_collision.png" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></img>
+      </div>
+    </div>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p>
+        As we increase the weight of the adversarial self-collision loss, the hand retargeter network produces fewer self-colliding joint configurations (maroon), but incurs a higher energy with less similar poses (blue).  A higher energy means that the predicted robot hand pose is dissimilar to the operator's hand pose.
+        </p>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Emergent Unstructured Gaits</h2>
+        <h2 class="title is-2" style="text-align: center;">Experiment Videos from Inexperienced Operators</h2>
         <tr>
           <td>
             <br>
@@ -270,7 +241,7 @@
                 &nbsp;
                 <video autoplay loop muted playsinline src="./resources/plank.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
               </div>
-              <br />              
+              <br />
               <div class="columns is-centered has-text-centered v-divider">
                 <video autoplay loop muted playsinline src="./resources/unstructured-indoor-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
                 &nbsp;
@@ -278,70 +249,25 @@
               </div>
           </td>
         </tr>
-      </div> 
+      </div>
     </div>
 
     <br><br>
   </div>
 </section>
 
-<section class="section">
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <div class="is-vcentered interpolation-panel">
-        <h2 class="title is-2" style="text-align: center;">Related Work</h2>
-        <div class="content is-centered has-text-centered">
-          This work is part of our series of research on learning based control of legged robots. Please check out other works below. 
-        </div>
-        <br><br>
-        <div class="container">
-          <div class="subtitle is-centered">
-            <table width="100%">
-              <tr>
-                <td width="100%">
-                <div style="float:left;margin-right:30px;margin-left:30px;">
-                <video autoplay loop muted src="resources/rma-clip.mp4" width="400"></video>
-                </div>
-                RMA: Rapid Motor Adaptation for Legged Robots <br/>
-                Ashish Kumar, Zipeng Fu, Deepak Pathak, Jitendra Malik <br/>
-                RSS 2021 <br/> <br/> <br/> 
-                <a href="https://ashish-kmr.github.io/rma-legged-robots/rma-locomotion-final.pdf">PDF</a> | 
-                <a href="https://www.youtube.com/watch?v=nBy1piJrq1A">Video</a> |
-                <a href="https://ashish-kmr.github.io/rma-legged-robots/">Project Page</a> 
-              </tr>
-            </table>
-          </div>
-          <div class="subtitle is-centered">
-            <table width="100%">
-              <tr>
-                <td width="100%">
-                  <div style="float:left;margin-right:30px;margin-left:30px;">
-                  <video autoplay loop muted src="resources/nav-clip.mp4" width="400"></video>
-                  </div>
-                  Coupling Vision and Proprioception for Navigation of Legged Robots <br/>
-                  Zipeng Fu*, Ashish Kumar*, Ananye Agarwal, Haozhi Qi, Jitendra Malik, Deepak Pathak <br/>
-                  <br.? <br/> <br/> <br/>
-                  <a href="https://navigation-locomotion.github.io/camera-ready/resources/navigation-locomotion.pdf">PDF</a> | 
-                  <a href="https://www.youtube.com/watch?v=sZVvutQUAQ4">Video</a> |
-                  <a href="https://navigation-locomotion.github.io/camera-ready/">Project Page</a> 
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
 
 
 <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="titile">BibTeX</h2>
-    <pre><code>@inproceedings{fu2021minimizing,
-  author    = {Fu, Zipeng and Kumar, Ashish and Malik, Jitendra and Pathak, Deepak},
-  title     = {Minimizing Energy Consumption Leads to the Emergence of Gaits in Legged Robots},
-  journal   = {Conference on Robot Learning ({CoRL})},
-  year      = {2021},
+    <pre><code>@inproceedings{as_telekinesis,
+  author    = {Sivakumar, Aravind and Shaw, Kenneth and Pathak, Deepak},
+  title     = {Robotic Telekinesis: Learning a Robotic Hand Imitator by Watching Humans on Youtube},
+  journal   = {Computer Vision and Pattern Recognition ({CVPR})},
+  year      = {2022},
 }</code></pre>
   </div>
 </section>
