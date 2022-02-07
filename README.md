@@ -1,2 +1,2 @@
-# robotic-telekinesis.github.io
+# robo-telekinesis.github.io
 Website for Robotic-Telekinesis

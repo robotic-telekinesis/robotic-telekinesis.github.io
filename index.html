@@ -23,22 +23,15 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
-  <!--<link rel="icon" href="./favicon.ico?"> -->
-
-  <!-- <meta name="twitter:label1" content="Written by" />
-  <meta name="twitter:data1" content="Deepak Pathak" /> -->
-  <!-- <meta name="twitter:label2" content="Filed under" />
-  <meta name="twitter:data2" content="" /> -->
-  <meta name="twitter:site" content="@pathak2206" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="900" />
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <meta name="twitter:card" content="player" />
-  <meta name="twitter:image" content="https://energy-locomotion.github.io/static/images/preview.jpg" />
-  <meta name="twitter:player" content="https://www.youtube.com/embed/OQN5W2IAb9k" />
+  <meta name="twitter:image" content="./resources/crop_method.png" />
   <meta name="twitter:player:width" content="640" />
   <meta name="twitter:player:height" content="360" />
+
 </head>
 <body>
 
@@ -50,11 +43,6 @@
           <h1 class="title is-1 publication-title">Robotic Telekinesis:</h1><h2 class = "title is-34 publication-title">Learning a Robotic Hand Imitator by Watching Humans on Youtube</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a>Aravind Sivakumar</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a>‪Kenneth Shaw</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup>
-              <br /><sup>1</sup>Carnegie Mellon University
-              <span class="brmod">ArXiv 2022</span>
             </span>
           </div>
 
@@ -94,9 +82,7 @@
       <div class="column is-two-thirds">
         <div id="method_video" class="columns is-centered has-text-centered">
             <div class="publication-video">
-              <iframe src="https://drive.google.com/file/d/1lnn3OSnZWyAWHM8c8dSHSdsqptw4Tlpo/preview"
-                      width="640" height="480" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/-KevrnGzAaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <h2 class="subtitle has-text-centered">
 
@@ -114,8 +100,8 @@
       <div class="column is-two-thirds">
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-          We build a system that enables a human to control a robot hand and arm, simply by demonstrating motions with their own hand. The robot observes the human operator via a single RGB camera and imitates their actions \textbf{in real-time}. Human hands and robot hands differ in shape, size, and joint structure, and performing this translation from a single uncalibrated camera is a highly underconstrained problem. Moreover, the retargeted trajectories must effectively execute tasks on a physical robot, which requires them to be temporally smooth and free of self-collisions. Our key insight is that while paired human-robot correspondence data is expensive to collect, the internet contains a massive corpus of rich and diverse human hand videos. We leverage this data in order to train a system that understands human hands, and retargets a human video stream into a robot hand-arm trajectory that is smooth, swift, safe, and semantically similar to the guiding demonstration. We demonstrate that it enables previously untrained people to teleoperate a robot on various dexterous manipulation tasks. We hope this work makes robot teaching more accessible, and that in the future, our system can be used to aid robots that learn to act autonomously in the real world.
+          <p style = "font-size: 20px">
+We build a system that enables any human to control a robot hand and arm, simply by demonstrating motions with their own hand. The robot observes the human operator via a single RGB camera and imitates their actions in real-time. Human hands and robot hands differ in shape, size, and joint structure, and performing this translation from a single uncalibrated camera is a highly underconstrained problem. Moreover, the retargeted trajectories must effectively execute tasks on a physical robot, which requires them to be temporally smooth and free of self-collisions. Our key insight is that while paired human-robot correspondence data is expensive to collect, the internet contains a massive corpus of rich and diverse human hand videos. We leverage this data to train a system that understands human hands and retargets a human video stream into a robot hand-arm trajectory that is smooth, swift, safe, and semantically similar to the guiding demonstration. We demonstrate that it enables previously untrained people to teleoperate a robot on various dexterous manipulation tasks. Our low-cost, glove-free, marker-free remote teleoperation system makes robot teaching more accessible and we hope that it can aid robots that learn to act autonomously in the real world.
           </p>
         </div>
       </div>
@@ -142,8 +128,8 @@
         </tr>
         <div class="is-vcentered interpolation-panel">
           <div class="content has-text-centered">
-            <p>
-              Robot is completing tasks with the expert operator.  These tasks from left to right, from the first row are Pickup Dice Toy, Pickup Dinosaur   Doll, Box Rotation, Scissor Pickup, Cup Stack.  On the second row, two cup stacking, pouring cubes onto plate, cup into plate, open drawer and open drawer and pickup cup.
+            <p style = "font-size: 20px">
+              The <b>expert operator completes task </b> with the robot.  These tasks from left to right, from the first row are Pickup Dice Toy, Pickup Dinosaur   Doll, Box Rotation, Scissor Pickup, Cup Stack.  On the second row, two cup stacking, pouring cubes onto plate, cup into plate, open drawer and open drawer and pickup cup.
             </p>
           </div>
         </div>
@@ -168,28 +154,11 @@
         </tr>
         <div class="is-vcentered interpolation-panel">
           <div class="content has-text-centered">
-            <p>
-              Our system consists of an xArm6 robot arm, a 16-DoF Allegro robot hand and a single RGB camera that captures a stream of images of the human operator.  The camera can be placed anywhere as long as the operator is within the camera's field of view.  Each captured image at 30hz is retargeted into a pair of robot commands (one for the Allegro hand and one for the xArm) which place the robot hand and arm in poses that match the hand-arm poses of the human operator.  This capture-retarget-command loop allows the operator to guide the robot to complete tasks while watching the robot mimic them in real-time.  The figure illustrates operators using the system to solve a pair of grasping tasks.
+            <p style = "font-size: 20px">
+              <b>Our system:</b> Consists of an xArm6 robot arm, a 16-DoF Allegro robot hand and a single RGB camera that captures a stream of images of the human operator.  The camera can be placed anywhere as long as the operator is within the camera's field of view.  Each captured image at 30hz is retargeted into a pair of robot commands (one for the Allegro hand and one for the xArm) which place the robot hand and arm in poses that match the hand-arm poses of the human operator.  This capture-retarget-command loop allows the operator to guide the robot to complete tasks while watching the robot mimic them in real-time.  The figure illustrates operators using the system to solve a pair of grasping tasks.
             </p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <br><br>
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Test Time Optimization vs Learned Neural Network Retargeting
-        </br>
-        <br>
-            <img src="./static/images/self_collision.png" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></img>
-      </div>
-    </div>
-    <div class="is-vcentered interpolation-panel">
-      <div class="content has-text-centered">
-        <p>
-        TODO SOMETHING BETTER HERE: We consider hand retargeting networks.  The red boxes highlight instances where the vanilla network outputs Allegro hand poses that result in self-collision.  The green boxes depict the predictions of the network trained with self-collision loss.  These robot hand poses maintain functional similarity to the human's hand pose, but avoid self-collision.
-        </p>
       </div>
     </div>
 
@@ -200,62 +169,90 @@
         <h2 class="title is-2" style="text-align: center;">Human Subject Study
         </br>
         <br>
+            <img src="./resources/table.png" style="border: 1px solid #bbb; border-radius: 10px; width: 90%;"></img>
+      </div>
+    </div>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p style = "font-size: 20px">
+          <b>Success rate and completion time of a trained operator completing a variety of tasks using two methods.</b>  Our system outperforms the baseline in 7 out of 10 tasks and is either equal or similar in performance on the other three tasks.  In practice, users found our system to be more fluid and easier to control.  *Dexpilot-Single is reimplementation of Dexpilot with one camera instead of four and using a gradient descent solver as original code was not released.
+        </p>
+      </div>
+    </div>
+    </br>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        </br>
+        <br>
             <img src="./resources/graphs.PNG" style="border: 1px solid #bbb; border-radius: 10px; width: 90%;"></img>
       </div>
     </div>
     <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p>
-          Ten rookie operators were asked to complete tasks: Picking up a plush dice, opening a plastic drawer, and placing a cup onto a plate.  After seven tries at each task, the mean and standard deviation of their completion times were recorded per task.
+        <p style = "font-size: 20px">
+          <b>Ten rookie operators were asked to complete tasks:</b> Picking up a plush dice, opening a plastic drawer, and placing a cup onto a plate. After seven tries at each task, the mean and standard deviation of their completion times were recorded per task.
         </p>
       </div>
     </div>
+
+
+    <br><br>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center;">Experiment Videos from Inexperienced Operators</h2>
-        <tr>
-          <td>
-            <br>
-              <div class="columns is-centered has-text-centered v-divider">
-                <video autoplay loop muted playsinline src="./resources/rocky.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/plank.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-              </div>
-              <br />
-              <div class="columns is-centered has-text-centered v-divider">
-                <video autoplay loop muted playsinline src="./resources/unstructured-indoor-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-                &nbsp;
-                <video autoplay loop muted playsinline src="./resources/unstructured-indoor-2.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
-              </div>
-          </td>
-        </tr>
-        <div class="is-vcentered interpolation-panel">
-          <div class="content has-text-centered">
-            <p>
-              Collage of various inexperienced operators completing tasks with Telekinesis.
-            </p>
-          </div>
-        </div>
+        <h2 class="title is-2" style="text-align: center;">Neural Network Retargeter
+        </br>
+        <br>
+            <img src="./resources/energy_function-crop.png" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></img>
+      </div>
+    </div>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p style = "font-size: 20px">
+          <b>Human-to-robot Translations:</b>  The inputs and outputs of our hand retargeting network.  Each of the pairs depicts a human hand pose, and the retargeted Allegro hand pose.
+        </p>
       </div>
     </div>
 
     <br><br>
-  </div>
-</section>
-
-
-
-
-
-<section class="section" id="BibTeX">
-  <div class="container content">
-    <h2 class="titile">BibTeX</h2>
-    <pre><code>@inproceedings{as_telekinesis,
-  author    = {Sivakumar, Aravind and Shaw, Kenneth and Pathak, Deepak},
-  title     = {Robotic Telekinesis: Learning a Robotic Hand Imitator by Watching Humans on Youtube},
-  journal   = {Computer Vision and Pattern Recognition ({CVPR})},
-  year      = {2022},
-}</code></pre>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Self-Collision Avoidance via Adversarial Training
+        </br>
+        <br>
+            <img src="./static/images/self_collision.png" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></img>
+      </div>
+    </div>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p style = "font-size: 20px">
+        We compare a vanilla hand retargeting network versus ours with a self-collision loss.  The red boxes highlight instances where the vanilla network outputs Allegro hand poses that result in self-collision.  The green boxes depict the predictions of the network trained with self-collision loss.  These robot hand poses maintain functional similarity to the human's hand pose, but avoid self-collision.
+        </p>
+      </div>
+    </div>
+  </br>
+    <h2 class="title is-2" style="text-align: center;">Experiment Videos from Untrained Operators</h2>
+        <br>
+            <video width="640" height="480" loop muted controls picture-in-picture poster="./resources/Operator1_compressed.PNG">
+              <source src="./resources/Operator1_compressed.mp4" type="video/mp4">
+            </video>
+            <video width="640" height="480" loop muted controls picture-in-picture  poster="./resources/operator2_compressed.PNG">
+              <source src="./resources/operator2_compressed.mp4" type="video/mp4">
+            </video>
+          <br/>
+          <video width="640" height="480" loop muted controls picture-in-picture poster="./resources/operator3_compressed.PNG">
+            <source src="./resources/operator3_compressed.mp4" type="video/mp4"  >
+          </video>
+          <video width="640" height="480" loop muted controls picture-in-picture poster="./resources/operator4_compressed.PNG">
+            <source src="./resources/operator4_compressed.mp4" type="video/mp4">
+          </video>
+<div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <p style = "font-size: 20px">
+          Collage of various inexperienced and untrained operators completing tasks with Telekinesis.
+        </p>
+      </div>
+    </div>
+    <br><br>
   </div>
 </section>
 
