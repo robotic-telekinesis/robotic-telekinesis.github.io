@@ -47,8 +47,6 @@
               <a>‪Kenneth Shaw</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup>
               <br /><sup>1</sup>Carnegie Mellon University
-              <span class="brmod">ArXiv 2022</span>
-
             </span>
           </div>
 
@@ -56,7 +54,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./resources/CoRL-Energy-Locomotion.pdf"
+                <a href="https://arxiv.org/abs/2202.10448"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -106,7 +104,7 @@
       <div class="column is-two-thirds">
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
-          <p style = "font-size: 20px">
+          <p style = "font-size: 18px">
 We build a system that enables any human to control a robot hand and arm, simply by demonstrating motions with their own hand. The robot observes the human operator via a single RGB camera and imitates their actions in real-time. Human hands and robot hands differ in shape, size, and joint structure, and performing this translation from a single uncalibrated camera is a highly underconstrained problem. Moreover, the retargeted trajectories must effectively execute tasks on a physical robot, which requires them to be temporally smooth and free of self-collisions. Our key insight is that while paired human-robot correspondence data is expensive to collect, the internet contains a massive corpus of rich and diverse human hand videos. We leverage this data to train a system that understands human hands and retargets a human video stream into a robot hand-arm trajectory that is smooth, swift, safe, and semantically similar to the guiding demonstration. We demonstrate that it enables previously untrained people to teleoperate a robot on various dexterous manipulation tasks. Our low-cost, glove-free, marker-free remote teleoperation system makes robot teaching more accessible and we hope that it can aid robots that learn to act autonomously in the real world.
           </p>
         </div>
@@ -134,7 +132,7 @@ We build a system that enables any human to control a robot hand and arm, simply
         </tr>
         <div class="is-vcentered interpolation-panel">
           <div class="content has-text-centered">
-            <p style = "font-size: 20px">
+            <p style = "font-size: 18px">
               The <b>expert operator completes task </b> with the robot.  These tasks from left to right, from the first row are Pickup Dice Toy, Pickup Dinosaur   Doll, Box Rotation, Scissor Pickup, Cup Stack.  On the second row, two cup stacking, pouring cubes onto plate, cup into plate, open drawer and open drawer and pickup cup.
             </p>
           </div>
@@ -160,7 +158,7 @@ We build a system that enables any human to control a robot hand and arm, simply
         </tr>
         <div class="is-vcentered interpolation-panel">
           <div class="content has-text-centered">
-            <p style = "font-size: 20px">
+            <p style = "font-size: 18px">
               <b>Our system:</b> Consists of an xArm6 robot arm, a 16-DoF Allegro robot hand and a single RGB camera that captures a stream of images of the human operator.  The camera can be placed anywhere as long as the operator is within the camera's field of view.  Each captured image at 30hz is retargeted into a pair of robot commands (one for the Allegro hand and one for the xArm) which place the robot hand and arm in poses that match the hand-arm poses of the human operator.  This capture-retarget-command loop allows the operator to guide the robot to complete tasks while watching the robot mimic them in real-time.  The figure illustrates operators using the system to solve a pair of grasping tasks.
             </p>
           </div>
@@ -180,7 +178,7 @@ We build a system that enables any human to control a robot hand and arm, simply
     </div>
     <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p style = "font-size: 20px">
+        <p style = "font-size: 18px">
           <b>Success rate and completion time of a trained operator completing a variety of tasks using two methods.</b>  Our system outperforms the baseline in 7 out of 10 tasks and is either equal or similar in performance on the other three tasks.  In practice, users found our system to be more fluid and easier to control.  *Dexpilot-Single is reimplementation of Dexpilot with one camera instead of four and using a gradient descent solver as original code was not released.
         </p>
       </div>
@@ -195,7 +193,7 @@ We build a system that enables any human to control a robot hand and arm, simply
     </div>
     <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p style = "font-size: 20px">
+        <p style = "font-size: 18px">
           <b>Ten rookie operators were asked to complete tasks:</b> Picking up a plush dice, opening a plastic drawer, and placing a cup onto a plate. After seven tries at each task, the mean and standard deviation of their completion times were recorded per task.
         </p>
       </div>
@@ -213,7 +211,7 @@ We build a system that enables any human to control a robot hand and arm, simply
     </div>
     <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p style = "font-size: 20px">
+        <p style = "font-size: 18px">
           <b>Human-to-robot Translations:</b>  The inputs and outputs of our hand retargeting network.  Each of the pairs depicts a human hand pose, and the retargeted Allegro hand pose.
         </p>
       </div>
@@ -230,7 +228,7 @@ We build a system that enables any human to control a robot hand and arm, simply
     </div>
     <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p style = "font-size: 20px">
+        <p style = "font-size: 18px">
         We compare a vanilla hand retargeting network versus ours with a self-collision loss.  The red boxes highlight instances where the vanilla network outputs Allegro hand poses that result in self-collision.  The green boxes depict the predictions of the network trained with self-collision loss.  These robot hand poses maintain functional similarity to the human's hand pose, but avoid self-collision.
         </p>
       </div>
@@ -253,7 +251,7 @@ We build a system that enables any human to control a robot hand and arm, simply
           </video>
 <div class="is-vcentered interpolation-panel">
       <div class="content has-text-centered">
-        <p style = "font-size: 20px">
+        <p style = "font-size: 18px">
           Collage of various inexperienced and untrained operators completing tasks with Telekinesis.
         </p>
       </div>
@@ -265,9 +263,10 @@ We build a system that enables any human to control a robot hand and arm, simply
 <div class="is-vcentered interpolation-panel">
   <div class="content has-text-centered">
     <p style = "font-size: 16px">
-      This material is based upon work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE2140739.
-
-      Any opinion, findings, and conclusions or recommendations expressed in this material are those of the authors(s) and do not necessarily reflect the views of the National Science Foundation.
+      We would like to thank Ankur Handa for providing initial feedback on this project.
+      We are grateful to Shikhar Bahl, Murtaza Dalal and Russell Mendonca for feedback on the paper.
+      We would also like to thank Murtaza Dalal, Alex Li, Kathryn Chen, Ankit Ramchandani, Ananye Agarwal, Jianren Wang, Zipeng Fu, Aditya Kannan, Sam Triest for helping with experiments.
+      KS is supported by NSF Graduate Research Fellowship under Grant No. DGE2140739. The work was supported in part by NSF IIS-2024594 and GoodAI Research Award.
     </p>
   </div>
 </div>
