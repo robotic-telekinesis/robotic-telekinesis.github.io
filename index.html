@@ -190,7 +190,7 @@ We build a system that enables any human to control a robot hand and arm, simply
     <br>
     <h2 class="title is-2" style="text-align: center;">Remote Teleoperation</h2>
       <div class="content has-text-centered">
-          <video width="960" height="720" autoplay loop muted controls picture-in-picture>
+          <video id="remote" width="960" height="720" autoplay loop muted controls picture-in-picture>
             <source src="./resources/inthewild_compressed.mp4" type="video/mp4">
           </video>
           <div class="is-vcentered interpolation-panel">
@@ -309,6 +309,11 @@ We build a system that enables any human to control a robot hand and arm, simply
   </div>
 </div>
 
+<script>
+document.getElementById('remote').addEventListener('loadedmetadata', function() {
+  this.currentTime = 4;
+}, false);
+</script>
 
 
 <!--<section class="section" id="BibTeX">
