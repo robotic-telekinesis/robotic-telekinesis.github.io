@@ -113,11 +113,17 @@
   </div>
 </section>
 <section class="hero teaser">
-  <div class="content has-text-centered">
-      <video width="960" height="720" loop muted controls picture-in-picture>
-        <source src="./resources/teaser_video.mp4" type="video/mp4">
-      </video>
+  <div class="columns is-centered">
+    <div class="column is-two-thirds">
+      <div id="method_video" class="columns is-centered has-text-centered">
+          <div class="publication-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/46OxlcJ48Bg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h2 class="subtitle has-text-centered">
+
+      </h2>
     </div>
+  </div>
 </section>
 
 
@@ -187,20 +193,21 @@ We build a system that enables any human to control a robot hand and arm, simply
         </div>
       </div>
     </div>
-    <br>
     <h2 class="title is-2" style="text-align: center;">Remote Teleoperation</h2>
-      <div class="content has-text-centered">
-          <video id="remote" width="960" height="720" autoplay loop muted controls picture-in-picture>
-            <source src="./resources/inthewild_compressed.mp4" type="video/mp4">
-          </video>
-          <div class="is-vcentered interpolation-panel">
-            <div class="content has-text-centered">
-              <p style = "font-size: 18px">
-              An operator completing a dice pickup task while watching the robot through a video conference.
-              </p>
-            </div>
+    <div class="is-vcentered interpolation-panel"> 
+      <div class="content has-text-centered"><div class="vsc-controller"></div>
+        <video id="remote" width="960" height="720" autoplay loop muted playsinline picture-in-picture style="border: 1px solid #bbb; border-radius: 10px;">
+          <source src="./resources/inthewild_compressed.mp4" type="video/mp4">
+        </video>
+      </div>
+        <div class="">
+          <div class="content has-text-centered">
+            <p style = "font-size: 18px">
+            An operator completing a dice pickup task while watching the robot through a video conference.
+            </p>
           </div>
         </div>
+    </div>
     <br><br>
     <div class="columns is-centered">
       <div class="column is-full-width">
